@@ -25,7 +25,7 @@ float input_voltage = 0.0;
 float temp=0.0;
 
 //RTC Module global variables
-const int time_interval=1;  // Sets the wakeup interval in minutes
+const int time_interval=10;  // Sets the wakeup interval in minutes
 
 // -#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-# //
 //                                                            SETUP
