@@ -126,7 +126,7 @@ void loop()
     input_voltage = (analog_value * 3.35) / 1024.0; 
 
    
-    if (input_voltage < 0.1) 
+    if (input_voltage < 0.01) 
     {
       input_voltage=0.0;
     } 
