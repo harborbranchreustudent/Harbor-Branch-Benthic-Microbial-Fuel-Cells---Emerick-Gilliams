@@ -1,3 +1,11 @@
+/*
+ * This setup allows you to measure the voltage of two objects (Fuel Cells, Batteries, etc.) up to 3000 mV. 
+ * The setup is currently calibrated to measure once every minute and goes to low power sleep when not actively measuring anything.
+ * Calibrate the Cali variable to the voltage of the VCC pin that is going to the breadboard. 
+ * 
+ */
+
+
 #include <Time.h>
 #include <TimeLib.h>
 #include <DS3232RTC.h>
@@ -129,9 +137,9 @@ void loop()
 //Change the 3.35 to whatever the voltage is coming from the VCC pin onto the breadboard. 
    
     int analog_value = analogRead(A0);
-    input_voltage = (analog_value * (Cali)) / 1024.0;
+    input_voltage = (analog_value * (Cali)*1000) / 1024.0;
     int analog_value2 = analogRead(A2);
-    input_voltage2 = (analog_value2 * (Cali)) / 1024.0; 
+    input_voltage2 = (analog_value2 * (Cali)*1000) / 1024.0; 
 
    
     if (input_voltage < 0.01) 
@@ -142,7 +150,7 @@ void loop()
     {
       input_voltage2=0.0;
     }
-    Serial.print("v = ");
+    Serial.print("mV = ");
     Serial.print(input_voltage);
     Serial.print(", ");
     Serial.println(input_voltage2);
