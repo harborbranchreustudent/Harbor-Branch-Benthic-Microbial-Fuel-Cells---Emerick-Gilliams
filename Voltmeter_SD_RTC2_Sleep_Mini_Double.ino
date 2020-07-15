@@ -6,6 +6,8 @@
 #include <avr/sleep.h> //this AVR library contains the methods that controls the sleep modes
 #define interruptPin 2 //Pin we are going to use to wake up the Arduino
 
+//Calibration
+float Cali = 3.35; // Calibration from VCC
 
 //Files
 File voltData;
@@ -127,9 +129,9 @@ void loop()
 //Change the 3.35 to whatever the voltage is coming from the VCC pin onto the breadboard. 
    
     int analog_value = analogRead(A0);
-    input_voltage = (analog_value * 3.35) / 1024.0;
+    input_voltage = (analog_value * (Cali)) / 1024.0;
     int analog_value2 = analogRead(A2);
-    input_voltage2 = (analog_value2 * 3.35) / 1024.0; 
+    input_voltage2 = (analog_value2 * (Cali)) / 1024.0; 
 
    
     if (input_voltage < 0.01) 
