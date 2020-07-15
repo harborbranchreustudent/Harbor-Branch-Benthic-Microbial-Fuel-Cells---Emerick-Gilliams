@@ -1,3 +1,11 @@
+/*
+ * This setup allows you to measure the voltage of a single object (Fuel Cells, Batteries, etc.) up to 3000 mV. 
+ * The setup is currently calibrated to measure once every 10 minutes and go to low power sleep when not actively measuring anything.
+ * The average current of this setup is 0.84 mA. 
+ * Calibrate the Cali variable to the voltage of the VCC pin that is going to the breadboard. 
+ * 
+ */
+
 #include <Time.h>
 #include <TimeLib.h>
 #include <DS3232RTC.h>
@@ -6,6 +14,8 @@
 #include <avr/sleep.h> //this AVR library contains the methods that controls the sleep modes
 #define interruptPin 2 //Pin we are going to use to wake up the Arduino
 
+//Calibration
+float Cali = 3.35; 
 
 //Files
 File voltData;
@@ -123,15 +133,16 @@ void loop()
 //Conversion formula for voltage
    
     int analog_value = analogRead(A0);
-    input_voltage = (analog_value * 3.35) / 1024.0; 
+    input_voltage = (analog_value * Cali*1000) / 1024.0; 
 
    
     if (input_voltage < 0.01) 
     {
       input_voltage=0.0;
     } 
-    Serial.print("v = ");
+    Serial.print("mV = ");
     Serial.println(input_voltage);
+
     
     //Reset the clock
     previousTime_1 = currentTime;
