@@ -3,6 +3,7 @@
  * The setup is currently calibrated to measure once every 10 seconds and goes to low power sleep when not actively measuring anything.
  * Calibrate the Cali variable to the voltage of the VCC pin that is going to the breadboard. 
  * This variation can be used for both charging and discharging tests on fuel cells. 
+ * This is calibrated for the USB power source from a PC. 
  * 
  */
 
@@ -15,7 +16,7 @@
 #include <avr/sleep.h> //this AVR library contains the methods that controls the sleep modes
 #define interruptPin 2 //Pin we are going to use to wake up the Arduino
 
-//Calibration
+//Calibration from VCC pin. 
 float Cali = 3.35;
 
 //Files
