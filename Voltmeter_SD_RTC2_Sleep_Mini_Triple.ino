@@ -1,6 +1,6 @@
 /*
- * This setup allows you to measure the voltage of two objects (Fuel Cells, Batteries, etc.) up to 3000 mV. 
- * The setup is currently calibrated to measure once every minute and goes to low power sleep when not actively measuring anything.
+ * This setup allows you to measure the voltage of three objects (Fuel Cells, Batteries, etc.) up to 3000 mV. 
+ * The setup is currently calibrated to measure once every 10 minutes and goes to low power sleep when not actively measuring anything.
  * Calibrate the Cali variable to the voltage of the VCC pin that is going to the breadboard. 
  * 
  */
