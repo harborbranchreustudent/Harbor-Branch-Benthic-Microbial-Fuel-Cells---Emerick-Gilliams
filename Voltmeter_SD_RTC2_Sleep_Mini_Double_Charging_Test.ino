@@ -3,6 +3,7 @@
  * The setup is currently calibrated to measure once every 10 seconds and goes to low power sleep when not actively measuring anything.
  * Calibrate the Cali variable to the voltage of the VCC pin that is going to the breadboard. 
  * This variation can be used for both charging and discharging tests on fuel cells. 
+ * Use A0 for Fuel Cell 1 and A2 for Fuel Cell 2
  * This is calibrated for the USB power source from a PC. 
  * 
  */
