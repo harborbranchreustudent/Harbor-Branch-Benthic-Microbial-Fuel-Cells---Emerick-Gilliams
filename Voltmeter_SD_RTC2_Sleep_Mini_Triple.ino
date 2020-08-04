@@ -112,7 +112,7 @@ void setup()
       voltData.print(",     ");
       voltData.print("Voltage (A0)");
       voltData.print(", ");
-      voltData.println("Voltage (A1)");
+      voltData.print("Voltage (A1)");
       voltData.print(", ");
       voltData.println("Voltage (A2)");
       voltData.close();}
