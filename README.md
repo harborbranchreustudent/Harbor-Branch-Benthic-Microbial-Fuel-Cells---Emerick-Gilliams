@@ -1,27 +1,6 @@
-# Harbor-Branch-Benthic-Microbial-Fuel-Cells---Emerick-Gilliams
-This repository holds all information relevant to the Benthic Microbial Fuel Cell (BMFC) Project with Intern Emerick Gilliams and Dr. Jordon Beckler
-
-I urge you to read through the Final Project Write Up before looking through the GitHub files.
-
-All of the following information is present in the Final Project Write Up:
-• Detailed Relevancy, Methods, and Results of Indoor BMFCs... 
-• Detailed Methods and Results of Outdoor BMFCs...
-• Materials, Procedures and Recommendations regarding building an Arduino Voltmeter and an Arduino Waterproof Enclosure...
-• Materials, Procedures and Recommendations regarding building your own BMFC Design and deploying it indoors and outdoors...
-
-On the GitHub, you will find the different variations of code for the Arduino Voltmeter that was custom created. The information regarding these files are all in the Final Project Write Up.
-
-A quick summary of these files are: 
-They are all for an Arduino Pro Mini 3.3V 8MHz. 
-Voltmeter_SD_RTC2_Sleep_Mini is for a single input;
-Voltmeter_SD_RTC2_Sleep_Mini_Double is for a double input;
-Voltmeter_SD_RTC2_Sleep_Mini_Triple is for a triple input;
-Voltmeter_SD_RTC2_Sleep_Mini_Double_Charging is to be used with a double input for charging and discharging tests (More information on this in the Write Up.);
-
-Download the three folders DS3232RTC, Time, Streaming and place into your libraries folder in your Arduino folder in order to use the files above. 
-
-On this GitHub is also a supply list that lists everything you need to recreate my project.There are also the files and images of the circuit diagrams for all of the relevant codes. Once again, these are explained further in the Final Project Write Up. 
-
-If you have any questions please reach out to me at gilliamse@ufl.edu...
-
-
+# HBOI BMFC Summer 2022
+A continuation of Emerick Gilliams' project, [linked here](https://github.com/harborbranchreustudent/Harbor-Branch-Benthic-Microbial-Fuel-Cells---Emerick-Gilliams).  This project seeks to extend and complement the work done by Emerick.  The primary extension in this project is to provide the sensor system with a self-sustaining power source using the the Fuel Cells.  This system should allow for nearly indefinite periods of time, likely to be limited by health of the battery rather than simply the charge.  In addition, more information will be gathered on the performance and characteristics of the BMFC including polarization curves and power density curves.  The primary focus for the electronic and code design will be power efficiency and modularity.
+## Electronics:
+While still in development, the heart of the system will (likely) be a [Ti TPS61200](https://www.ti.com/lit/ds/symlink/tps61201.pdf?ts=1654524777230&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTPS61201) based DC-DC converter.  This device was choosen due to its low start-up voltage (and lower operational voltage) which complements the capabilities of the Fuel Cell well.  Another option would be based on the [LTC3108] (https://www.analog.com/media/en/technical-documentation/data-sheets/LTC3108.pdf) however, with a max V<sub>in</sub> of 500 mV, the Fuel Cells we tested would have been incompatabile without more electrical components.  The rest of the the electronics consist of microcontroller and a [LiPo Charger](https://www.sparkfun.com/products/15217)
+## Microcontroller
+--WIP--
